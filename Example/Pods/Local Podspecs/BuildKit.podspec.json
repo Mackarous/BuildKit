@@ -1,0 +1,22 @@
+{
+  "name": "BuildKit",
+  "version": "0.1.0",
+  "summary": "A short description of BuildKit.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Andrew Mackarous/BuildKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Andrew Mackarous": "a.mackarous@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Andrew Mackarous/BuildKit.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "BuildKit/Classes/**/*"
+}

@@ -1,0 +1,6 @@
+framework module BuildKit {
+  umbrella header "BuildKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

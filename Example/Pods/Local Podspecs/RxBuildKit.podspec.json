@@ -1,0 +1,31 @@
+{
+  "name": "RxBuildKit",
+  "version": "0.1.0",
+  "summary": "RxBuildKit is an RxSwift wrapper around BuildKit.",
+  "description": "RxBuildKit is an RxSwift wrapper around BuildKit.\nBuildKit is a Swift framework used as a base layer to create iOS Apps. \nIt contains base app layer code that I have compiled over time. \nThis library can be used to start a new project quickly and cleanly.",
+  "homepage": "https://github.com/Mackarous/BuildKit",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Andrew Mackarous": "a.mackarous@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/Mackarous/BuildKit.git",
+    "tag": "0.1.0"
+  },
+  "swift_version": "4.2",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "source_files": "RxBuildKit/Classes/**/*",
+  "dependencies": {
+    "BuildKit": [
+
+    ],
+    "RxSwift": [
+
+    ]
+  }
+}

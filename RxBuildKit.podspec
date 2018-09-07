@@ -1,8 +1,9 @@
 Pod::Spec.new do |s|
-  s.name             = 'BuildKit'
+  s.name             = 'RxBuildKit'
   s.version          = '0.1.0'
-  s.summary          = 'BuildKit is a Swift framework used as a base layer to create iOS Apps.'
+  s.summary          = 'RxBuildKit is an RxSwift wrapper around BuildKit.'
   s.description      = <<-DESC
+RxBuildKit is an RxSwift wrapper around BuildKit.
 BuildKit is a Swift framework used as a base layer to create iOS Apps. 
 It contains base app layer code that I have compiled over time. 
 This library can be used to start a new project quickly and cleanly.
@@ -16,6 +17,9 @@ This library can be used to start a new project quickly and cleanly.
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'BuildKit/Classes/**/*'
+  s.source_files     = 'RxBuildKit/Classes/**/*'
+
+  s.dependency 'BuildKit'
+  s.dependency 'RxSwift'
   
 end
