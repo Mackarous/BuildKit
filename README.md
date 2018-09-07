@@ -1,6 +1,6 @@
 # BuildKit
 
-[![CI Status](https://img.shields.io/travis/Andrew Mackarous/BuildKit.svg?style=flat)](https://travis-ci.org/Andrew Mackarous/BuildKit)
+[![CI Status](https://img.shields.io/travis/Mackarous/BuildKit.svg?style=flat)](https://travis-ci.org/Mackarous/BuildKit)
 [![Version](https://img.shields.io/cocoapods/v/BuildKit.svg?style=flat)](https://cocoapods.org/pods/BuildKit)
 [![License](https://img.shields.io/cocoapods/l/BuildKit.svg?style=flat)](https://cocoapods.org/pods/BuildKit)
 [![Platform](https://img.shields.io/cocoapods/p/BuildKit.svg?style=flat)](https://cocoapods.org/pods/BuildKit)
