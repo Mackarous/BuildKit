@@ -1,27 +1,36 @@
 PODS:
   - BuildKit (0.1.0)
-  - Nimble (7.0.3)
-  - Quick (1.2.0)
+  - Nimble (7.3.0)
+  - Quick (1.3.1)
+  - RxBuildKit (0.1.0):
+    - BuildKit
+    - RxSwift
+  - RxSwift (4.2.0)
 
 DEPENDENCIES:
-  - BuildKit (from `../`)
-  - Nimble (~> 7.0.2)
-  - Quick (~> 1.2.0)
+  - Nimble
+  - Quick
+  - RxBuildKit (from `../`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Nimble
     - Quick
+    - RxSwift
+  https://github.com/mackarous/Specs.git:
+    - BuildKit
 
 EXTERNAL SOURCES:
-  BuildKit:
+  RxBuildKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BuildKit: 0f8546c3f995617fde7d117c7590347a7b6a61c1
-  Nimble: 7f5a9c447a33002645a071bddafbfb24ea70e0ac
-  Quick: 58d203b1c5e27fff7229c4c1ae445ad7069a7a08
+  BuildKit: 84b567ed65193a4969613e463fb95bbdbd6ccb0e
+  Nimble: c8d6a1f463701921c46de965c673e13cafa09196
+  Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
+  RxBuildKit: c1c19c2e2f210eb67469ce524d83421152cacd8e
+  RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: c61963cc1e9c82bbd053878cbcbbb2454e5a821c
+PODFILE CHECKSUM: 87fa3774b8bfbfda3d3eab3c26521d5be8684223
 
 COCOAPODS: 1.5.3
