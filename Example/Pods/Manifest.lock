@@ -1,8 +1,8 @@
 PODS:
-  - BuildKit (0.2.0)
+  - BuildKit (0.2.1)
   - Nimble (7.3.0)
   - Quick (1.3.1)
-  - RxBuildKit (0.2.0):
+  - RxBuildKit (0.2.1):
     - BuildKit
     - RxSwift
   - RxSwift (4.2.0)
@@ -13,24 +13,24 @@ DEPENDENCIES:
   - RxBuildKit (from `../`)
 
 SPEC REPOS:
+  "git@github.com:Mackarous/Specs.git":
+    - BuildKit
   https://github.com/cocoapods/specs.git:
     - Nimble
     - Quick
     - RxSwift
-  https://github.com/mackarous/Specs.git:
-    - BuildKit
 
 EXTERNAL SOURCES:
   RxBuildKit:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BuildKit: 9505bdaeb9b58ed86fda4e9d2d5cfb12c783c63b
+  BuildKit: 0d30aa376401f95234883f63a6419006ffa0ab52
   Nimble: c8d6a1f463701921c46de965c673e13cafa09196
   Quick: d17304d58d0d169dd0bd1c6e5c28e3318de32a1a
-  RxBuildKit: 50922f30d0cb2295ce1c13bdd310ff4cabb14e4e
+  RxBuildKit: 8c089ee358357cbeee2ef5c8f0452b9abf5bea8c
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
 
-PODFILE CHECKSUM: 87fa3774b8bfbfda3d3eab3c26521d5be8684223
+PODFILE CHECKSUM: af4d8c3e6e4e58127339ee616ba5e51860b9f0f4
 
 COCOAPODS: 1.5.3
