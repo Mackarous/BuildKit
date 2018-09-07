@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'RxBuildKit'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'RxBuildKit is an RxSwift wrapper around BuildKit.'
   s.description      = <<-DESC
 RxBuildKit is an RxSwift wrapper around BuildKit.

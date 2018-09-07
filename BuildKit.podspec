@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'BuildKit'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'BuildKit is a Swift framework used as a base layer to create iOS Apps.'
   s.description      = <<-DESC
 BuildKit is a Swift framework used as a base layer to create iOS Apps. 
