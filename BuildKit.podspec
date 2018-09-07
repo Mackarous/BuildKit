@@ -17,5 +17,5 @@ This library can be used to start a new project quickly and cleanly.
   s.ios.deployment_target = '11.0'
 
   s.source_files = 'BuildKit/Classes/**/*'
-  
+
 end
