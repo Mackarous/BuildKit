@@ -13,9 +13,14 @@ This library can be used to start a new project quickly and cleanly.
   s.author           = { 'Andrew Mackarous' => 'a.mackarous@gmail.com' }
   s.source           = { :git => 'https://github.com/Mackarous/BuildKit.git', :tag => s.version.to_s }
   s.swift_version    = '4.2'
+  s.default_subspec  = 'Core'
 
   s.ios.deployment_target = '11.0'
 
-  s.source_files = 'BuildKit/Classes/**/*'
+#  s.source_files = 'BuildKit/Classes/**/*'
+
+  s.subspec 'Core' do |c|
+    c.source_files = 'BuildKit/Classes/**/*'
+  end
 
 end

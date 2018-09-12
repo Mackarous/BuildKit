@@ -3,6 +3,9 @@ public protocol Cancellable {
 }
 
 public struct Cancellables {
+    /// Creates a cancellable that does nothing. A No Operation cancellable
+    ///
+    /// - Returns: Cancellable that does nothing
     public static func create() -> Cancellable {
         return NopCancellable.noOp
     }
