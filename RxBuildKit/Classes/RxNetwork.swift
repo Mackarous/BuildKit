@@ -15,7 +15,7 @@ public extension Network {
 }
 
 public extension Reactive where Base: RxNetwork {
-    public func perform<T: APIOperation>(operation: T) -> Observable<T.Response> {
+    public func perform<T: NetworkOperation>(operation: T) -> Observable<T.Response> {
         return .create { observer in
             let op = self.base.network.perform(operation: operation) { result in
                 switch result {

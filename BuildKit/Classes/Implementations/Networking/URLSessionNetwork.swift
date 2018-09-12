@@ -12,7 +12,7 @@ public struct URLSessionNetwork: Network {
     
     public init() { }
     
-    public func perform<T>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable where T : APIOperation {
+    public func perform<T>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable where T : NetworkOperation {
         do {
             let request = try operation.createRequest()
             return URLSession.shared.dataTask(with: request) { data, response, error in
