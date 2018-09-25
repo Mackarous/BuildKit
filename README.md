@@ -1,5 +1,6 @@
 # BuildKit
 
+![Version](https://app.bitrise.io/app/06cb9ede193f94e4/status.svg?token=oI99ZT0OeipesbHGYhYRGw)
 [![Version](https://img.shields.io/cocoapods/v/BuildKit.svg?style=flat)](https://cocoapods.org/pods/BuildKit)
 [![License](https://img.shields.io/cocoapods/l/BuildKit.svg?style=flat)](https://cocoapods.org/pods/BuildKit)
 [![Platform](https://img.shields.io/cocoapods/p/BuildKit.svg?style=flat)](https://cocoapods.org/pods/BuildKit)
