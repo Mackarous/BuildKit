@@ -1,5 +1,5 @@
-source 'git@github.com:Mackarous/Specs.git'
-source 'https://github.com/CocoaPods/Specs.git'
+source 'git@github.com:mackarous/specs.git'
+source 'https://github.com/cocoapods/specs.git'
 
 platform :ios, '11.0'
 
