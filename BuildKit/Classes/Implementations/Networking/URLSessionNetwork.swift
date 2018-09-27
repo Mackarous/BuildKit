@@ -1,11 +1,12 @@
 import Foundation
 
-public struct URLSessionNetwork: Network {
+public struct URLSessionNetwork: Network {    
     public enum Error: LocalizedError {
-        case unknown
+        case unknown, invalidRequest
         public var errorDescription: String? {
             switch self {
             case .unknown: return "An unknown error has occured"
+            case .invalidRequest: return "The request type was invalid"
             }
         }
     }
@@ -14,7 +15,7 @@ public struct URLSessionNetwork: Network {
     
     public func perform<T>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable where T : NetworkOperation {
         do {
-            let request = try operation.createRequest()
+            guard let request = try operation.createRequest() as? URLRequest else { throw Error.invalidRequest }
             return URLSession.shared.dataTask(with: request) { data, response, error in
                 if let data = data {
                     do {

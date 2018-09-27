@@ -3,8 +3,9 @@ public protocol Network {
 }
 
 public protocol NetworkOperation {
+    associatedtype Request
     associatedtype Response
-    func createRequest() throws -> URLRequest
+    func createRequest() throws -> Request
     func decode(data: Data) throws -> Response
 }
 
