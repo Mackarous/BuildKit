@@ -1,6 +1,6 @@
 {
   "name": "BuildKit",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "summary": "BuildKit is a Swift framework used as a base layer to create iOS Apps.",
   "description": "BuildKit is a Swift framework used as a base layer to create iOS Apps. \nIt contains base app layer code that I have compiled over time. \nThis library can be used to start a new project quickly and cleanly.",
   "homepage": "https://github.com/Mackarous/BuildKit",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/Mackarous/BuildKit.git",
-    "tag": "0.3.1"
+    "tag": "0.3.2"
   },
   "swift_version": "4.2",
   "default_subspecs": "Core",
