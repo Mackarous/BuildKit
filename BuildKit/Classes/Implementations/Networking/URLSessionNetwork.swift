@@ -16,7 +16,7 @@ public struct URLSessionNetwork: Network {
     public func perform<T>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable where T : NetworkOperation {
         do {
             guard let request = try operation.createRequest() as? URLRequest else { throw Error.invalidRequest }
-            return URLSession.shared.dataTask(with: request) { data, response, error in
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let data = data {
                     do {
                         complete(.success(try operation.decode(data: data)))
@@ -29,6 +29,8 @@ public struct URLSessionNetwork: Network {
                     complete(.error(Error.unknown))
                 }
             }
+            task.resume()
+            return task
         } catch {
             complete(.error(error))
         }
