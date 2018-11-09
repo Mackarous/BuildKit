@@ -1,6 +1,5 @@
 # BuildKit
 
-[![Version](https://app.bitrise.io/app/06cb9ede193f94e4/status.svg?token=oI99ZT0OeipesbHGYhYRGw)](https://app.bitrise.io/app/06cb9ede193f94e4#/builds)
 [![Version](https://img.shields.io/cocoapods/v/BuildKit.svg?style=flat)](https://cocoapods.org/pods/BuildKit)
 [![License](https://img.shields.io/cocoapods/l/BuildKit.svg?style=flat)](https://cocoapods.org/pods/BuildKit)
 [![Platform](https://img.shields.io/cocoapods/p/BuildKit.svg?style=flat)](https://cocoapods.org/pods/BuildKit)
@@ -13,10 +12,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-BuildKit is available through [CocoaPods](https://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+BuildKit is not yet available through [CocoaPods](https://cocoapods.org), but it is available using my private [Specs](https://github.com/mackarous/Specs) repo . To install it, simply add the following lines to your Podfile:
 
 ```ruby
+source 'https://github.com/mackarous/specs.git'
+source 'https://github.com/cocoapods/specs.git'
+
 pod 'BuildKit'
 ```
 
