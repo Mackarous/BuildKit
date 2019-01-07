@@ -1,5 +1,5 @@
 public protocol Network {
-    func perform<T: NetworkOperation>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable
+    @discardableResult func perform<T: NetworkOperation>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable
 }
 
 public protocol NetworkOperation {
