@@ -1,10 +1,14 @@
+import UIKit
+
 public protocol AuthenticationProvider {
     var currentState: AuthenticationState { get }
-    var didUpdateState: ((AuthenticationState) -> Void)? { get set }
+    var didDeauthenticate: (() -> Void)? { get set }
+    func authenticationControl<T: UIControl>() -> T
+    func setContainerViewController(_ viewController: UIViewController)
     func authenticate(completion: @escaping (Result<AuthenticationTokens>) -> Void)
 }
 
-public struct AuthenticationTokens {
+public struct AuthenticationTokens: Equatable {
     public let accessToken: String
     public let idToken: String
     
@@ -14,7 +18,7 @@ public struct AuthenticationTokens {
     }
 }
 
-public enum AuthenticationState {
+public enum AuthenticationState: Equatable {
     case authorized(AuthenticationTokens)
     case unauthorized
 }
