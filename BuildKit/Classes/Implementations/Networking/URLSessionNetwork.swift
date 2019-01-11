@@ -1,4 +1,5 @@
 import Foundation
+import os
 
 public struct URLSessionNetwork: Network {
     public enum Error: LocalizedError {
@@ -20,25 +21,35 @@ public struct URLSessionNetwork: Network {
     public func perform<T>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable where T : NetworkOperation {
         do {
             guard var request = try operation.createRequest() as? URLRequest else { throw Error.invalidRequest }
+            os_log("Created network request %s", type: .debug, request.description)
             if operation.requiresAuthorization {
                 request.setValue("Bearer \(sessionManager.currentSession.token)", forHTTPHeaderField: "Authorization")
+                os_log("Request requires authorization %s", type: .debug, request.allHTTPHeaderFields?.description ?? "")
             }
+            os_log("Performing network request %s", type: .debug, request.description)
             let task = URLSession.shared.dataTask(with: request) { data, _, error in
                 if let data = data {
                     do {
-                        complete(.success(try operation.decode(data: data)))
+                        os_log("Request completed successfully... Attempting decode", type: .debug)
+                        let result = try operation.decode(data: data)
+                        os_log("Decoding complete %s", type: .debug, (result as? CustomStringConvertible)?.description ?? "")
+                        complete(.success(result))
                     } catch {
+                        os_log("Error while decoding data %s", type: .error, error.localizedDescription)
                         complete(.error(error))
                     }
                 } else if let error = error {
+                    os_log("Request incomplete: %s", type: .error, error.localizedDescription)
                     complete(.error(error))
                 } else {
+                    os_log("Unknown error", type: .error)
                     complete(.error(Error.unknown))
                 }
             }
             task.resume()
             return task
         } catch {
+            os_log("Unable to create network request %s", type: .error, error.localizedDescription)
             complete(.error(error))
         }
         return Cancellables.create()
