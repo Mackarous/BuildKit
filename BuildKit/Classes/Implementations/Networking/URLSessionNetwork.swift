@@ -11,17 +11,17 @@ public struct URLSessionNetwork: Network {
         }
     }
 
-    private let session: Session
+    private let sessionManager: SessionManager
 
-    public init(session: Session) {
-        self.session = session
+    public init(sessionManager: SessionManager) {
+        self.sessionManager = sessionManager
     }
     
     public func perform<T>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable where T : NetworkOperation {
         do {
             guard var request = try operation.createRequest() as? URLRequest else { throw Error.invalidRequest }
             if operation.requiresAuthorization {
-                request.setValue("Bearer \(session.token)", forHTTPHeaderField: "Authorization")
+                request.setValue("Bearer \(sessionManager.currentSession.token)", forHTTPHeaderField: "Authorization")
             }
             let task = URLSession.shared.dataTask(with: request) { data, _, error in
                 if let data = data {

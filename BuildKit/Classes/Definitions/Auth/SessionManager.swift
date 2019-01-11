@@ -9,5 +9,5 @@ import Foundation
 
 public protocol SessionManager {
     var currentSession: Session! { get }
-    func authorizeSession(withIdToken idToken: String, completion: @escaping (Result<Session>) -> Void)
+    func authorizeSession(with network: Network, idToken: String, completion: @escaping (Result<Session>) -> Void)
 }

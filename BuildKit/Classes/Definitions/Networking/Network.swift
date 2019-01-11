@@ -1,5 +1,5 @@
 public protocol Network {
-    init(session: Session)
+    init(sessionManager: SessionManager)
     @discardableResult func perform<T: NetworkOperation>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable
 }
 
