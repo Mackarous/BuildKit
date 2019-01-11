@@ -9,4 +9,5 @@ import Foundation
 
 public protocol Session {
     var token: String { get }
+    func currentUser<U: User>() -> U
 }

@@ -1,6 +1,6 @@
 import Foundation
 
-public struct URLSessionNetwork: Network {    
+public struct URLSessionNetwork: Network {
     public enum Error: LocalizedError {
         case unknown, invalidRequest
         public var errorDescription: String? {
@@ -10,12 +10,19 @@ public struct URLSessionNetwork: Network {
             }
         }
     }
-    
-    public init() { }
+
+    private let sessionManager: SessionManager!
+
+    public init(sessionManager: SessionManager) {
+        self.sessionManager = sessionManager
+    }
     
     public func perform<T>(operation: T, complete: @escaping (Result<T.Response>) -> Void) -> Cancellable where T : NetworkOperation {
         do {
-            guard let request = try operation.createRequest() as? URLRequest else { throw Error.invalidRequest }
+            guard var request = try operation.createRequest() as? URLRequest else { throw Error.invalidRequest }
+            if operation.requiresAuthorization {
+                request.setValue("Bearer \("sessionManager.currentSession().token")", forHTTPHeaderField: "Authorization")
+            }
             let task = URLSession.shared.dataTask(with: request) { data, _, error in
                 if let data = data {
                     do {

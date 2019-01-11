@@ -1,6 +1,6 @@
 import Foundation
 
-extension Date {
+public extension Date {
     var isToday: Bool {
         return Calendar.current.isDateInToday(self)
     }
@@ -19,5 +19,9 @@ extension Date {
     
     var yesterday: Date? {
         return Calendar.current.date(byAdding: .day, value: -1, to: self)
+    }
+    
+    var year: Int {
+        return Calendar.current.component(.year, from: self)
     }
 }
