@@ -1,7 +1,6 @@
 import UIKit
 
 public protocol AuthenticationProvider {
-    var tokens: AuthenticationTokens { get set }
     var hasAuthInKeychain: Bool { get }
     func authenticationControl<T: UIControl>() -> T
     func setContainerViewController(_ viewController: UIViewController)
