@@ -1,11 +1,11 @@
 PODS:
-  - BuildKit (0.3.2):
-    - BuildKit/Core (= 0.3.2)
-  - BuildKit/Core (0.3.2)
+  - BuildKit (0.4.0):
+    - BuildKit/Core (= 0.4.0)
+  - BuildKit/Core (0.4.0)
   - Nimble (7.3.1)
   - Quick (1.3.2)
   - RxAtomic (4.4.0)
-  - RxBuildKit (0.3.2):
+  - RxBuildKit (0.4.0):
     - BuildKit
     - RxSwift
   - RxSwift (4.4.0):
@@ -31,11 +31,11 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BuildKit: 2351a749ac0c885a88289584cd4a78817c7497b2
+  BuildKit: 7fd75432ac2062d352e481beb1f3256e22401ff1
   Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
   Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
   RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxBuildKit: 2bf62198b73569725535f37d4dc7831696459776
+  RxBuildKit: 073fcbd031cfa324e6bd9c789431e53c22038e98
   RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
 
 PODFILE CHECKSUM: 864767b143e155b01c32af5fc5cf0944685073c5
