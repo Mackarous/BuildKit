@@ -10,9 +10,9 @@ public extension UIView {
         set { layer.cornerRadius = newValue }
     }
     
-    @IBInspectable public var rounded: Bool {
+    @IBInspectable public var isRounded: Bool {
         get { return layer.cornerRadius == bounds.width * 2 }
-        set { return layer.cornerRadius = newValue ? bounds.width / 2 : cornerRadius }
+        set { layer.cornerRadius = newValue ? bounds.width / 2 : cornerRadius }
     }
     
     @IBInspectable public var borderColor: UIColor? {

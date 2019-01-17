@@ -27,6 +27,7 @@ public extension NetworkOperation {
 
 public extension NetworkOperation where Response: Decodable, Decoder == JSONDecoder {
     func decode(data: Data) throws -> Response {
+        os_log("BuildKit.NetworkOperation: Received data %{private}@", type: .debug, String(data: data, encoding: .utf8).debugDescription)
         let decoder = JSONDecoder()
         os_log("BuildKit.NetworkOperation: Created decoder %{public}@", type: .debug, String(describing: decoder))
         configure(decoder: decoder)

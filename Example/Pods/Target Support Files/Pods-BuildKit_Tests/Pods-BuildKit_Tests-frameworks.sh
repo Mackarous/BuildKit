@@ -146,6 +146,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BuildKit/BuildKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Quick/Quick.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxBuildKit/RxBuildKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
 fi
@@ -153,6 +154,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BuildKit/BuildKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Quick/Quick.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxBuildKit/RxBuildKit.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework"
 fi
