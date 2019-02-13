@@ -3,14 +3,14 @@ import RxSwift
 
 public final class RxNetwork: ReactiveCompatible {
     fileprivate let network: Network
-    fileprivate init(network: Network) {
+    fileprivate init(_ network: Network) {
         self.network = network
     }
 }
 
 public extension Network {
     public var rx: Reactive<RxNetwork> {
-        return RxNetwork(network: self).rx
+        return RxNetwork(self).rx
     }
 }
 
