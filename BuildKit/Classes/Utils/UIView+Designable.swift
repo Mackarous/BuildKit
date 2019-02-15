@@ -1,6 +1,7 @@
 import UIKit
 
 @IBDesignable final class DesignableView: UIView { }
+@IBDesignable final class DesignableButton: UIButton { }
 @IBDesignable final class DesignableImageView: UIImageView { }
 @IBDesignable final class DesignableTextField: UITextField { }
 
