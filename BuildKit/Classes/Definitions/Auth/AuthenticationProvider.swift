@@ -5,6 +5,7 @@ public protocol AuthenticationProvider {
     func authenticationControl<T: UIControl>() -> T
     func setContainerViewController(_ viewController: UIViewController)
     func authenticate(completion: @escaping (Result<AuthenticationTokens>) -> Void)
+    func deauthenticate()
 }
 
 public struct AuthenticationTokens: Equatable {

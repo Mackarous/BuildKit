@@ -30,6 +30,11 @@ import UIKit
         update()
     }
     
+    public override func layoutSubviews() {
+        super.layoutSubviews()
+        update()
+    }
+    
     private func update() {
         gradientLayer.startPoint = startPoint
         gradientLayer.endPoint = endPoint

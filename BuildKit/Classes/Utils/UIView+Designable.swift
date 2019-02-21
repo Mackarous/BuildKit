@@ -1,9 +1,26 @@
 import UIKit
 
 @IBDesignable final class DesignableView: UIView { }
-@IBDesignable final class DesignableButton: UIButton { }
 @IBDesignable final class DesignableImageView: UIImageView { }
 @IBDesignable final class DesignableTextField: UITextField { }
+
+@IBDesignable final class DesignableButton: UIButton {
+    @IBInspectable public var color: UIColor? {
+        didSet { setBackgroundImage(.from(color), for: .normal) }
+    }
+
+    @IBInspectable public var highlightedColor: UIColor? {
+        didSet { setBackgroundImage(.from(highlightedColor), for: .highlighted) }
+    }
+
+    @IBInspectable public var disabledColor: UIColor? {
+        didSet { setBackgroundImage(.from(disabledColor), for: .disabled) }
+    }
+
+    @IBInspectable public var focusedColor: UIColor? {
+        didSet { setBackgroundImage(.from(focusedColor), for: .focused) }
+    }
+}
 
 public extension UIView {
     @IBInspectable public var cornerRadius: CGFloat {
