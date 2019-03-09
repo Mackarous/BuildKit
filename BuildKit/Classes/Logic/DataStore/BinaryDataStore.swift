@@ -7,14 +7,14 @@ public final class BinaryDataStore: DataStore {
     
     public init(path: String) {
         os_log("BuildKit.BinaryDataStore: Initializing BinaryDataStore with path: %{public}@", type: .debug, path)
-        let url = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0]
-        os_log("BuildKit.BinaryDataStore: Creating directory with url: %{public}@", type: .debug, url.absoluteString)
+        let url = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0].appendingPathComponent(path)
+        os_log("BuildKit.BinaryDataStore: Using directory with url: %{public}@", type: .debug, url.absoluteString)
         do {
             try fileManager.createDirectory(at: url, withIntermediateDirectories: true)
         } catch {
             preconditionFailure(error.localizedDescription)
         }
-        os_log("BuildKit.BinaryDataStore: Successfully created directory at url: %{public}@", type: .debug, url.absoluteString)
+        os_log("BuildKit.BinaryDataStore: Successfully opened directory at url: %{public}@", type: .debug, url.absoluteString)
         folderURL = url
     }
     
