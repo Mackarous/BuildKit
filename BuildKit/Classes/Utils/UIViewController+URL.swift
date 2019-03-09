@@ -1,12 +1,16 @@
 import SafariServices
 import UIKit
 
-public extension UIViewController {
-    enum OpenLocation {
+public extension URL {
+    public enum OpenLocation {
         case inApp, inSafari
+        
+        public static var `default`: OpenLocation = .inApp
     }
-    
-    func open(url: URL, _ location: OpenLocation = .inApp) {
+}
+
+public extension UIViewController {
+    func open(url: URL, _ location: URL.OpenLocation = .default) {
         switch location {
         case .inApp:
             guard let scheme = url.scheme else { return }
