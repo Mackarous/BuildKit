@@ -11,16 +11,19 @@ public extension URL {
 
 public extension UIViewController {
     func open(url: URL, _ location: URL.OpenLocation = .default) {
+        let app = UIApplication.shared
         switch location {
         case .inApp:
             guard let scheme = url.scheme else { return }
             if scheme.hasPrefix("http") {
-                present(SFSafariViewController(url: url), animated: true)
+                let safariViewController = SFSafariViewController(url: url)
+                safariViewController.preferredControlTintColor = app.keyWindow?.tintColor
+                present(safariViewController, animated: true)
             } else {
-                UIApplication.shared.open(url, options: [:])
+                app.open(url, options: [:])
             }
         case .inSafari:
-            UIApplication.shared.open(url, options: [:])
+            app.open(url, options: [:])
         }
     }
 }
