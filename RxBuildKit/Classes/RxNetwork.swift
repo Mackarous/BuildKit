@@ -9,13 +9,13 @@ public final class RxNetwork: ReactiveCompatible {
 }
 
 public extension Network {
-    public var rx: Reactive<RxNetwork> {
+    var rx: Reactive<RxNetwork> {
         return RxNetwork(self).rx
     }
 }
 
 public extension Reactive where Base: RxNetwork {
-    public func perform<T: NetworkOperation>(operation: T) -> Observable<T.Response> {
+    func perform<T: NetworkOperation>(operation: T) -> Observable<T.Response> {
         return .create { observer in
             let op = self.base.network.perform(operation: operation) { result in
                 switch result {

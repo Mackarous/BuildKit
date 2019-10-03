@@ -9,13 +9,13 @@ public final class RxDataStore: ReactiveCompatible {
 }
 
 public extension DataStore {
-    public var rx: Reactive<RxDataStore> {
+    var rx: Reactive<RxDataStore> {
         return RxDataStore(self).rx
     }
 }
 
 public extension Reactive where Base: RxDataStore {
-    public func readItem<T: Storable>() -> Observable<T> {
+    func readItem<T: Storable>() -> Observable<T> {
         do {
             return .just(try self.base.dataStore.readItem())
         } catch {
@@ -23,7 +23,7 @@ public extension Reactive where Base: RxDataStore {
         }
     }
 
-    public func readItems<T: Storable>() -> Observable<[T]> {
+    func readItems<T: Storable>() -> Observable<[T]> {
         do {
             return .just(try self.base.dataStore.readItems())
         } catch {
@@ -31,7 +31,7 @@ public extension Reactive where Base: RxDataStore {
         }
     }
     
-    public func create<T: Storable>(_ item: T) -> Observable<T> {
+    func create<T: Storable>(_ item: T) -> Observable<T> {
         do {
             try self.base.dataStore.create(item)
             return .just(item)
@@ -40,7 +40,7 @@ public extension Reactive where Base: RxDataStore {
         }
     }
     
-    public func create<T: Storable>(_ items: [T]) -> Observable<[T]> {
+    func create<T: Storable>(_ items: [T]) -> Observable<[T]> {
         do {
             try self.base.dataStore.create(items)
             return .just(items)

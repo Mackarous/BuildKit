@@ -9,7 +9,7 @@ public final class RxSessionManager: ReactiveCompatible {
 }
 
 public extension SessionManager {
-    public var rx: Reactive<RxSessionManager> {
+    var rx: Reactive<RxSessionManager> {
         return RxSessionManager(self).rx
     }
 }

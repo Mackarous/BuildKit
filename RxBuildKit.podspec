@@ -13,7 +13,7 @@ This library can be used to start a new project quickly and cleanly.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Andrew Mackarous' => 'a.mackarous@gmail.com' }
   s.source           = { :git => 'https://github.com/Mackarous/BuildKit.git', :tag => s.version.to_s }
-  s.swift_version    = '4.2'
+  s.swift_version    = '5.1'
 
   s.ios.deployment_target = '11.0'
 

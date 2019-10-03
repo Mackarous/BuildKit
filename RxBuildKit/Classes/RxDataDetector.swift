@@ -9,7 +9,7 @@ public final class RxDataDetector: ReactiveCompatible {
 }
 
 public extension DataDetector {
-    public var rx: Reactive<RxDataDetector> {
+    var rx: Reactive<RxDataDetector> {
         return RxDataDetector(self).rx
     }
 }

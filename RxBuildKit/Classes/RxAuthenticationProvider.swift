@@ -9,13 +9,13 @@ public final class RxAuthenticationProvider: ReactiveCompatible {
 }
 
 public extension AuthenticationProvider {
-    public var rx: Reactive<RxAuthenticationProvider> {
+    var rx: Reactive<RxAuthenticationProvider> {
         return RxAuthenticationProvider(self).rx
     }
 }
 
 public extension Reactive where Base: RxAuthenticationProvider {
-    public func authenticate() -> Observable<AuthenticationTokens> {
+    func authenticate() -> Observable<AuthenticationTokens> {
         return .create { observer in
             self.base.authenticationProvider.authenticate { result in
                 switch result {

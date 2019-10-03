@@ -2,14 +2,12 @@ PODS:
   - BuildKit (0.4.0):
     - BuildKit/Core (= 0.4.0)
   - BuildKit/Core (0.4.0)
-  - Nimble (7.3.1)
-  - Quick (1.3.2)
-  - RxAtomic (4.4.0)
+  - Nimble (8.0.4)
+  - Quick (2.2.0)
   - RxBuildKit (0.4.0):
     - BuildKit
     - RxSwift
-  - RxSwift (4.4.0):
-    - RxAtomic (~> 4.4)
+  - RxSwift (5.0.0)
 
 DEPENDENCIES:
   - BuildKit (from `../`)
@@ -18,10 +16,9 @@ DEPENDENCIES:
   - RxBuildKit (from `../`)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Nimble
     - Quick
-    - RxAtomic
     - RxSwift
 
 EXTERNAL SOURCES:
@@ -31,13 +28,12 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BuildKit: 7fd75432ac2062d352e481beb1f3256e22401ff1
-  Nimble: 04f732da099ea4d153122aec8c2a88fd0c7219ae
-  Quick: 2623cb30d7a7f41ca62f684f679586558f483d46
-  RxAtomic: eacf60db868c96bfd63320e28619fe29c179656f
-  RxBuildKit: 073fcbd031cfa324e6bd9c789431e53c22038e98
-  RxSwift: 5976ecd04fc2fefd648827c23de5e11157faa973
+  BuildKit: cb38541dcebb137cf8aec95688dfabdf9060d117
+  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
+  Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  RxBuildKit: 40287a80cf0abd3c3b3788a470001c52932f444d
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
 
 PODFILE CHECKSUM: 864767b143e155b01c32af5fc5cf0944685073c5
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.8.1

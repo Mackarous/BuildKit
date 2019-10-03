@@ -23,17 +23,17 @@ import UIKit
 }
 
 public extension UIView {
-    @IBInspectable public var cornerRadius: CGFloat {
+    @IBInspectable var cornerRadius: CGFloat {
         get { return layer.cornerRadius }
         set { layer.cornerRadius = newValue }
     }
     
-    @IBInspectable public var isRounded: Bool {
+    @IBInspectable var isRounded: Bool {
         get { return layer.cornerRadius == bounds.width * 2 }
         set { layer.cornerRadius = newValue ? bounds.width / 2 : cornerRadius }
     }
     
-    @IBInspectable public var borderColor: UIColor? {
+    @IBInspectable var borderColor: UIColor? {
         get {
             guard let cgColor = layer.borderColor else { return nil }
             return UIColor(cgColor: cgColor)
@@ -41,12 +41,12 @@ public extension UIView {
         set { layer.borderColor = newValue?.cgColor }
     }
     
-    @IBInspectable public var borderWidth: CGFloat {
+    @IBInspectable var borderWidth: CGFloat {
         get { return layer.borderWidth }
         set { layer.borderWidth = newValue }
     }
     
-    @IBInspectable public var shadowColor: UIColor? {
+    @IBInspectable var shadowColor: UIColor? {
         get {
             guard let cgColor = layer.shadowColor else { return nil }
             return UIColor(cgColor: cgColor)
@@ -54,17 +54,17 @@ public extension UIView {
         set { layer.shadowColor = newValue?.cgColor }
     }
     
-    @IBInspectable public var shadowOffset: CGSize {
+    @IBInspectable var shadowOffset: CGSize {
         get { return layer.shadowOffset }
         set { layer.shadowOffset = newValue }
     }
     
-    @IBInspectable public var shadowRadius: CGFloat {
+    @IBInspectable var shadowRadius: CGFloat {
         get { return layer.shadowRadius }
         set { layer.shadowRadius = newValue }
     }
     
-    @IBInspectable public var shadowOpacity: Float {
+    @IBInspectable var shadowOpacity: Float {
         get { return layer.shadowOpacity }
         set { layer.shadowOpacity = newValue }
     }

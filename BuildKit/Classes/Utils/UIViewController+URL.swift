@@ -2,7 +2,7 @@ import SafariServices
 import UIKit
 
 public extension URL {
-    public enum OpenLocation {
+    enum OpenLocation {
         case inApp, inSafari
         
         public static var `default`: OpenLocation = .inApp
